@@ -11,20 +11,19 @@ function principal2(){
 			}
 		}
 	} while (respuesta === ''|| (respuesta !== '1' && respuesta !== '2'));
-}
+
 
 function cipher() { 
 	var u = false;
   do{ 
-
- 	var frase =prompt('ingresa una frase');
- 	var a = frase.toUpperCase();
- 	for (i=0;i<a.length;i++){
+    var frase =prompt('ingresa una frase');
+ 	  var a = frase.toUpperCase();
+ 	  for (i=0;i<a.length;i++){
  		if (typeof a[i]==='number' || a[i]===' '){
- 			u = true
+ 			u = true;
  			alert('Ingrese un texto sin numeros y sin espacios Vacios');
 		    break;
-		} 
+ 		} 
 	}
 	}while( u === true);
     // crea una string vacio para poner el texto cifrado.
@@ -48,28 +47,27 @@ function cipher() {
 function decipher(){
 	var u = false;
   do{ 
-
- 	var frase =prompt('ingresa una frase');
- 	var a = frase.toUpperCase();
- 	for (i=0;i<a.length;i++){
- 		if (typeof a[i]==='number' || a[i]===' '){
- 			u = true
+    var frase =prompt('ingresa una frase');
+ 	  var a = frase.toUpperCase();
+ 	  for (i=0;i<a.length;i++){
+ 		    if (typeof a[i]==='number' || a[i]===' '){
+ 			      u = true;
  			alert('Ingrese un texto sin numeros y sin espacios Vacios');
 		    break;
-		} 
-	}
-	}while( u === true);
+ 		      }
+    	}
+	  }while( u === true);
   	var descifrado = '';
-	for (var i = 0; i < a.length; i ++) {
+	  for (var i = 0; i < a.length; i ++) {
 		var indxLetras= a[i]; { 
 			var ascii = a.charCodeAt(i);
 				indxLetras = String.fromCharCode(((ascii + 65 - 33 ) % 26) + 65);	}
 
 				descifrado += indxLetras; 
+				
 			}
 			alert(' Tu frase ' + (a) +' descifrada es '+(descifrado));
-	
 }
 
-
+}
 principal2();
