@@ -2,15 +2,15 @@ function principal2() {
   do {
     var respuesta = prompt('Indique el número de lo que desea hacer:  \n 1)cipher \n 2)decipher');
     if (respuesta !== '') {
-      if (respuesta == '1') {
+      if (respuesta === '1') {
         cipher();
-	  } else if (respuesta == '2') {
+	  } else if (respuesta === '2') {
         decipher();
       } else {
         alert('Ingrese una opción válida');
       }
     }
-  } while (respuesta == '' || (respuesta !== '1' && respuesta !== '2'));
+  } while (respuesta === '' || (respuesta !== '1' && respuesta !== '2'));
 
 
   function cipher() { 
